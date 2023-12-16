@@ -1,4 +1,4 @@
-package com.example.board;
+package com.example.playlists;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping(value = "/board")
-public class BoardController {
+public class PlayController {
     @Autowired
-    BoardService boardService;
+    PlayService playService;
     //private final BoardService boardService;
 
     // 생성자를 통해 BoardService 주입
@@ -21,8 +21,8 @@ public class BoardController {
     //}
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public String boardlist(Model model){
-        model.addAttribute("list", boardService.getBoardList());
+    public String playlist(Model model){
+        model.addAttribute("list", playService.getPlayList());
         return "list";
     }
     @RequestMapping(value = "/add", method = RequestMethod.GET)
@@ -31,8 +31,8 @@ public class BoardController {
     }
 
     @RequestMapping(value = "/addok", method = RequestMethod.POST)
-    public String addPostOK(BoardVO vo) {
-        if (boardService.insertBoard(vo) == 0)
+    public String addPostOK(PlayVO vo) {
+        if (playService.insertPlay(vo) == 0)
             System.out.println("데이터 추가 실패 ");
         else
             System.out.println("데이터 추가 성공!!!");
@@ -40,13 +40,13 @@ public class BoardController {
     }
     @RequestMapping(value = "/editform/{id}", method = RequestMethod.GET)
     public String editPost(@PathVariable("id") int id, Model model) {
-        BoardVO boardVO = boardService.getBoard(id);
-        model.addAttribute("boardVO", boardVO);
+        PlayVO playVO = playService.getPlay(id);
+        model.addAttribute("playVO", playVO);
         return "editform";
     }
         @RequestMapping(value = "/editok", method = RequestMethod.POST)
-        public String editPostOk(BoardVO vo) {
-            if (boardService.updateBoard(vo) == 0)
+        public String editPostOk(PlayVO vo) {
+            if (playService.updatePlay(vo) == 0)
                 System.out.println("데이터 수정 실패 ");
             else
                 System.out.println("데이터 수정 성공!!!");
@@ -54,7 +54,7 @@ public class BoardController {
         }
             @ RequestMapping(value = "/deleteok/{id}", method = RequestMethod.GET)
             public String deletePostOk(@PathVariable("id") int id) {
-                if (boardService.deleteBoard(id) == 0)
+                if (playService.deletePlay(id) == 0)
                     System.out.println("데이터 삭제 실패 ");
                 else
                     System.out.println("데이터 삭제 성공!!!");

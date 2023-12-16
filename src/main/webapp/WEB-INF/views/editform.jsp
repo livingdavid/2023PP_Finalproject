@@ -1,7 +1,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" isELIgnored="false"
     pageEncoding="UTF-8"%>
-<%@page import="com.example.board.BoardDAO, com.example.board.BoardVO"%>
+<%@page import="com.example.playlists.PlayDAO, com.example.playlists.PlayVO"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,8 +11,8 @@
 <body>
 
 <h1>Edit Form</h1>
-<%--@elvariable id="boardVO" type=""--%>
-<form:form modelAttribute="boardVO" method="POST" action="../editok">
+<%--@elvariable id="playVO" type=""--%>
+<form:form modelAttribute="playVO" method="POST" action="../editok">
 	<form:hidden path="seq" />
 	<table id = "edit">
 <tr><td>Category:</td><td><form:input path="category"/></td></tr>

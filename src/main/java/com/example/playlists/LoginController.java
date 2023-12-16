@@ -1,4 +1,4 @@
-package com.example.board;
+package com.example.playlists;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,7 +28,7 @@ public class LoginController {
         if (loginvo != null) { // 로그인 성공
             System.out.println("로그인 성공!");
             session.setAttribute("login", loginvo);
-            returnURL = "redirect:/board/list";
+            returnURL = "redirect:/play/list";
         } else { // 로그인 실패
             System.out.println("로그인 실패!");
             returnURL = "redirect:/login/login";

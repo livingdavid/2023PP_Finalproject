@@ -1,4 +1,4 @@
-package com.example.board;
+package com.example.playlists;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;

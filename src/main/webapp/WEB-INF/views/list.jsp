@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<h1>BOARD post</h1>
+<h1>Play List</h1>
 <div class="table-responsive">
 	<table class="table table-striped table-sm">
 		<tr>
@@ -30,7 +30,6 @@
 				<td>${u.getSeq()}</td>
 				<td>${u.getTitle()}</td>
 				<td>${u.getWriter()}</td>
-				<td>${u.getContent()}</td>
 				<td>${u.getRegdate()}</td>
 				<td><a href="editform/${u.getSeq()}">Edit</a></td>
 				<td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>

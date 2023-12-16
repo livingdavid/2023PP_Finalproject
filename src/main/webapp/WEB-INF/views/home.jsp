@@ -14,6 +14,6 @@
 <h1>
     한동대학교 자유게시판
     </h1>
-    <P> <a href="board/list">게시판으로 이동</a></P>
+    <P> <a href="Play/list">게시판으로 이동</a></P>
 </body>
 </html>

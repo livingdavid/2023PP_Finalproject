@@ -1,4 +1,4 @@
-package com.example.board;
+package com.example.playlists;
 
 public class UserVO {
     public String getUserid() {

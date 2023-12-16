@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Play">
+    <insert id="insertPlay">
+        insert into PLAY (title, writer, genre, songlist, songcount, img, playtime)
+        values
+        (#{title} , #{writer} , #{content}, #{genre}, #{songlist} , #{songcount}, #{img}, #{playtime})</insert>
+
+    <update id="updatePlay">
+        update PLAY
+        set title=#{title}, writer=#{writer}, genre=#{genre}, songlist=#{songlist} , songcount=#{songcount}, img=#{img}, playtime=#{playtime} where seq=#{seq}
+    </update>
+
+    <delete id="deletePlay">
+        delete from PLAY where seq=#{seq}
+    </delete>
+
+    <select id="getPlay" resultType="play">
+        select * from PLAY where seq=#{seq}</select>
+
+    <select id="getPlayList" resultType="play">
+    select * from PLAY order by seq desc</select>
+</mapper>
