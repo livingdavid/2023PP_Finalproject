@@ -9,7 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3292ff4-07b4-4be8-8513-82cb85c0f8a7" name="Changes" comment="" />
+    <list default="true" id="b3292ff4-07b4-4be8-8513-82cb85c0f8a7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/playlists/PlayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/playlists/PlayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/playlists/PlayDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/playlists/PlayDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/play-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/play-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/user-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/user-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addpostform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addpostform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +71,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/livin/IdeaProjects/Spring4 - 복사본",
+    "last_opened_file_path": "C:/Users/livin/IdeaProjects/Spring4/src/main/webapp/resources/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,11 +87,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\livin\IdeaProjects\Spring4\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\livin\IdeaProjects\Spring4\src\main\webapp\resources\img" />
       <recent name="C:\Users\livin\IdeaProjects\Spring4\src\main\webapp\WEB-INF\views" />
+      <recent name="C:\Users\livin\IdeaProjects\Spring4\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\livin\IdeaProjects\Spring4\src\main\java\com\example\board" />
       <recent name="C:\Users\livin\IdeaProjects\Spring4\src\main\webapp" />
-      <recent name="C:\Users\livin\IdeaProjects\Spring4\src\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\livin\IdeaProjects\Spring4\src\main\webapp\resources" />
@@ -195,6 +209,7 @@
       <workItem from="1701739672050" duration="4664000" />
       <workItem from="1701998595415" duration="806000" />
       <workItem from="1702707908356" duration="13021000" />
+      <workItem from="1702761296303" duration="13078000" />
     </task>
     <task id="LOCAL-00001" summary="Before Final Project">
       <option name="closed" value="true" />
@@ -222,5 +237,16 @@
     <MESSAGE value="Before Final Project" />
     <MESSAGE value="Change Board to Play" />
     <option name="LAST_COMMIT_MESSAGE" value="Change Board to Play" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/playlists/PlayController.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

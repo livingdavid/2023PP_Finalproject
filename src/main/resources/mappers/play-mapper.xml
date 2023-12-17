@@ -6,7 +6,7 @@
     <insert id="insertPlay">
         insert into PLAY (title, writer, genre, songlist, songcount, img, playtime)
         values
-        (#{title} , #{writer} , #{content}, #{genre}, #{songlist} , #{songcount}, #{img}, #{playtime})</insert>
+        (#{title} , #{writer}, #{genre}, #{songlist} , #{songcount}, #{img}, #{playtime})</insert>
 
     <update id="updatePlay">
         update PLAY

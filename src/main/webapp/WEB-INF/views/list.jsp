@@ -4,46 +4,86 @@
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
-	<title>Title</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+	<title>Playlist Board</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<style>
+		.title {
+			margin-top: 20px;
+			color: #007bff;
+		}
+		.card {
+			margin-bottom: 20px;
+			transition: transform 0.3s ease-in-out;
+		}
+		.card:hover {
+			transform: scale(1.05);
+		}
+		.card-body {
+			padding: 15px;
+		}
+		.card-title {
+			margin-bottom: 10px;
+			color: #007bff;
+		}
+		.card-link {
+			color: #007bff;
+			text-decoration: none;
+		}
 
+		.add-btn {
+			display: block;
+			width: 200px;
+			margin: 30px auto;
+			padding: 10px;
+			text-align: center;
+			background-color: #28a745;
+			color: white;
+			border-radius: 5px;
+			transition: background-color 0.3s ease-in-out;
+		}
+		.add-btn:hover {
+			background-color: #218838;
+			text-decoration: none;
+			color: white;
+		}
+	</style>
 </head>
 <body>
 
-<h1>Play List</h1>
-<div class="table-responsive">
-	<table class="table table-striped table-sm">
-		<tr>
-			<th>Id</th>
-			<th>Category</th>
-			<th>Title</th>
-			<th>Writer</th>
-			<th>Content</th>
-			<th>Regdate</th>
-			<th>Edit</th>				<td>${u.getCategory()}</td>
-
-			<th>Delete</th>
-		</tr>
+<div class="container">
+	<h1 class="title text-center"><img src="../img/melon.png" height="50">Playlist Board</h1>
+	<div class="row">
 		<c:forEach items="${list}" var="u">
-			<tr>
-				<td>${u.getSeq()}</td>
-				<td>${u.getTitle()}</td>
-				<td>${u.getWriter()}</td>
-				<td>${u.getRegdate()}</td>
-				<td><a href="editform/${u.getSeq()}">Edit</a></td>
-				<td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>
-			</tr>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+				<div class="card">
+					<img class="card-img-top" src="../img/${u.getImg()}.png" alt="Playlist Image" style="max-height: 200px; object-fit: cover;">
+					<div class="card-body">
+						<h5 class="card-title"><img src="../img/cd.png" height="30">${u.getTitle()}</h5>
+						<p class="card-text">
+							<strong>Genre:</strong> ${u.getGenre()}<br>
+							<strong>Songs:</strong> ${u.getSongcount()}<br>
+							<strong>Playtime:</strong> ${u.getPlaytime()}<br>
+							<strong>Writer:</strong> ${u.getWriter()}<br>
+						</p>
+						<a href="editform/${u.getSeq()}" class="card-link">Edit</a>
+						<a href="view/${u.getSeq()}" class="card-link">View</a>
+						<a href="javascript:delete_ok('${u.getSeq()}')" class="card-link">Delete</a>
+					</div>
+				</div>
+			</div>
 		</c:forEach>
-	</table>
-	<br/><a href="add">Add New Post</a>
+	</div>
+	<a href="add" class="add-btn">Add New Post</a>
 </div>
 
-</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 	function delete_ok(id){
-		var a = confirm("정말로 삭제하시겠습니까?");
-		if(a) location.href='deleteok/'+id;
+		if(confirm("Are you sure you want to delete this item?")) {
+			location.href='deleteok/'+id;
+		}
 	}
 </script>
+</body>
 </html>

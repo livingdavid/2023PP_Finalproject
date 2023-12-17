@@ -1,23 +1,78 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>Add New Post</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .form-container {
+            width: 50%;
+            margin: auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            width: 100%;
+        }
+
+        .btn {
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
+<div class="container">
+    <h1>Add New Post</h1>
+    <form action="addok" method="post" class="form-container">
+        <div class="form-group">
+            <label>Title:</label>
+            <input type="text" name="title" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label>Writer:</label>
+            <input type="text" name="writer" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label>Genre:</label>
+            <input type="text" name="genre" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label>SongList:</label>
+            <textarea cols="50" rows="5" name="songList" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label>SongCount:</label>
+            <input type="number" name="songCount" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label>Img:</label>
+            <input type="text" name="img" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label>Playtime:</label>
+            <input type="text" name="playtime" class="form-control"/>
+        </div>
+        <button type="button" class="btn btn-secondary" onclick="location.href= 'list'">Cancel</button>
+        <button type="submit" class="btn btn-primary">ADD NEW Post</button>
+    </form>
+</div>
 
-<h1>Add New Post</h1>
-<form action="addok" method="post">
-<table id = "edit">
-<tr><td>Category:</td><td><input type="text" name="category"/></td></tr>
-<tr><td>Title:</td><td><input type="text" name="title"/></td></tr>
-<tr><td>Writer:</td><td><input type="text" name="writer"/></td></tr>
-<tr><td>Content:</td><td><textarea cols="50" rows="5" name="content"></textarea></td></tr>
-</table>
-    <button type="button" onclick="location.href= 'list'">Cancel</button>
-    <button type="submit">ADD NEW Post</button>
-</form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

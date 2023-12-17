@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping(value = "/board")
+@RequestMapping(value = "/play")
 public class PlayController {
     @Autowired
     PlayService playService;
@@ -61,4 +61,10 @@ public class PlayController {
                 return "redirect:../list";
             }
 
+    @RequestMapping(value = "/view/{id}", method = RequestMethod.GET)
+    public String view(@PathVariable("id") int id, Model model) {
+        PlayVO playVO = playService.getPlay(id);
+        model.addAttribute("u", playVO);
+        return "view";
+    }
 }

@@ -13,7 +13,8 @@
 </head>
 <body>
 <div style='width:100%;text-align:center;padding-top:100px'>
-    <img src='../img/sample.jpg' height="250">
+    <h1> Playlist Service</h1>
+    <img src='../img/main.png' height="250">
     <form method="post" action="loginOk">
         <div><label>User ID: </label><input type='text' name='userid' /></div>
         <div><label>Password: </label>

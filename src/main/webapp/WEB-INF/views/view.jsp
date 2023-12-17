@@ -5,48 +5,81 @@
 <html>
 <head>
     <title>Title</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <!-- Custom Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
     <style>
+
         .card {
-            /* ... */
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            border-radius: 0.25rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
         }
+
         .card:hover {
-            /* ... */
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         }
+
         .card-body {
-            /* ... */
+            padding: 1.25rem;
         }
-        .card-link {
-            /* ... */
+
+        .card-title {
+            margin-bottom: 0.75rem;
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        .card-text {
+            color: #6c757d;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .container {
+            max-width: 800px;
+        }
+
+        h1.text-center {
+            margin-bottom: 2rem;
+            color: #343a40;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
 <body>
 
 <div class="container mt-5">
-    <h1 class="text-center mb-4">BOARD Post Details</h1>
+    <h1 class="text-center mb-4">Playlists Details</h1>
     <div class="card">
+        <img src="../../img/${u.img}.png" alt="Playlist Image" style="max-width:100%;height:auto;"><br>
         <div class="card-body">
-            <h5 class="card-title">Title: ${item.title}</h5>
+            <h5 class="card-title">Title: ${u.title}</h5>
             <p class="card-text">
-                <strong>Id:</strong> ${item.seq}<br>
-                <strong>Writer:</strong> ${item.writer}<br>
-                <strong>Genre:</strong> ${item.genre}<br>
-                <strong>Song List:</strong> ${item.songList}<br>
-                <strong>Song Count:</strong> ${item.songCount}<br>
-                <strong>Img:</strong> <img src="${item.img}" alt="Playlist Image" style="max-width:100%; height:auto;"><br>
-                <strong>Regdate:</strong> ${item.regdate}<br>
-                <strong>Playtime:</strong> ${item.playtime}<br>
+                <strong>ID:</strong> ${u.seq}<br>
+                <strong>Writer:</strong> ${u.writer}<br>
+                <strong>Genre:</strong> ${u.genre}<br>
+                <strong>Song List:</strong> ${u.songlist}<br>
+                <strong>Song Count:</strong> ${u.songcount}<br>
+                <strong>Playtime:</strong> ${u.playtime}<br>
+                <strong>Regdate:</strong> ${u.regdate}<br>
             </p>
-            <a href="${path}/editform/${item.seq}" class="btn btn-primary">Edit</a>
-            <a href="javascript:delete_ok('${item.seq}')" class="btn btn-danger">Delete</a>
+            <a href="../list" class="btn btn-primary">Back</a>
+            <a href="javascript:delete_ok('${u.seq}')" class="btn btn-danger">Delete</a>
         </div>
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     function delete_ok(id){
         var a = confirm("정말로 삭제하시겠습니까?");

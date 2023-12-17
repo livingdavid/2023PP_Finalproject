@@ -12,8 +12,8 @@
 </head>
 <body>
 <h1>
-    한동대학교 자유게시판
+    플레이리스트 서비스
     </h1>
-    <P> <a href="Play/list">게시판으로 이동</a></P>
+    <P> <a href="play/list">리스트 목록으로 이동</a></P>
 </body>
 </html>

@@ -30,7 +30,7 @@ public class PlayDAO {
     }
 
     public List<PlayVO> getPlayList(){
-        List<PlayVO> list = sqlSession.selectList("Board.getPlayList");
+        List<PlayVO> list = sqlSession.selectList("Play.getPlayList");
         return list;
     }
 }
